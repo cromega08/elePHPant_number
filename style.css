@@ -1,0 +1,84 @@
+:root {
+	--main: #3D1766;
+	--second: #6F1AB6;
+	--third: #FF0032;
+	--contrast: #CD0404;
+}
+
+body {
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+	margin: unset;
+	background-image: linear-gradient(to bottom, var(--main) 0%, var(--contrast) 100%);
+	padding-top: 7.5vmax;
+	padding-bottom: 0;
+	display: grid;
+	justify-items: center;
+	align-items: baseline;
+}
+
+h1 {
+	font-size: 4em;
+	color: var(--contrast);
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	place-content: center;
+	align-items: center;
+	row-gap: 5em;
+}
+
+input[type="number"] {
+	transition-property: border-color;
+	transition-duration: 500ms;
+	background-color: transparent;
+	color: var(--third);
+	outline-style: none;
+	border-width: 0 0 .25em 0;
+	border-style: solid;
+	border-color: var(--contrast);
+	border-radius: .15em;
+	font-size: 4em;
+	text-align: center;
+	caret-color: var(--contrast);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	appearance: none;
+	margin: 0;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+	border-color: var(--third);
+}
+
+input[type="submit"] {
+	transition-property: scale, border-color;
+	transition-duration: 500ms;
+	scale: 1;
+	background-color: transparent;
+	color: var(--second);
+	outline-style: none;
+	border-color: var(--main);
+	border-style: solid;
+	border-radius: 1em;
+	border-width: .25em;
+	font-size: 2.5em;
+	font-weight: bold;
+	padding: .25em .75em;
+}
+
+input[type="submit"]:hover {
+	scale: 1.2;
+	border-color: var(--second);
+}
+
+input[type="submit"]:active {
+	scale: .8;
+	border-color: var(--second);
+}
