@@ -7,23 +7,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ElePHPant Number</title>
 	<link rel="stylesheet" href="style.css">
-	<!-- Create the style and see to join with js to set caret default position at the end of the input -->
 </head>
 
 <body>
 	<header>
 		<h1>
 			<?php
-					$userInput = (int) $_POST["userInput"];
-					$toGuess = (int) $_POST["toGuess"];
-					$attempts = getAttempts();
-					
-					if (checkWin()) echo "&bigstar; You guessed the number &bigstar;";
-					elseif (in_array((string) $userInput, $attempts)) echo "&rArr; Alredy tried that number &lArr;";
-					elseif($userInput > $toGuess) echo "&uArr;  number was higher &uArr;";
-					elseif($userInput < $toGuess) echo "&dArr; Your number was lower &dArr;";
-					else echo "&blacklozenge; Find the Number &blacklozenge;";
-				?>
+				$userInput = (int) $_POST["userInput"];
+				$toGuess = (int) $_POST["toGuess"];
+				$attempts = getAttempts();
+				
+				if (checkWin()) echo "&bigstar; You guessed the number &bigstar;";
+				elseif (in_array((string) $userInput, $attempts)) echo "&rArr; Alredy tried that number &lArr;";
+				elseif($userInput > $toGuess) echo "&uArr;  number was higher &uArr;";
+				elseif($userInput < $toGuess) echo "&dArr; Your number was lower &dArr;";
+				else echo "&blacklozenge; Find the Number &blacklozenge;";
+			?>
 		</h1>
 	</header>
 	<main>
